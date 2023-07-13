@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/rust-wasm/target/wasm32-unknown-emscripten/CACHEDIR.TAG
+/rust-wasi/target
+/rust-wasm/target

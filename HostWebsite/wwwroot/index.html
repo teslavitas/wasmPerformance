@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>  
+</head>
+<body>
+    <input type="button" id="runCSharp" value="Run C#" />
+    <input type="button" id="runRust" value="Run Rust" />
+    <input type="button" id="runJS" value="Run JS" />
+    <script type="module">
+        import { GetSharpWasm } from './dotnet/charp-wasm.js';
+        import { runJSPayload } from './JavaScriptDirect.js';
+
+        async function loadRust() {
+            const response = await fetch("rust_wasm.wasm");
+            const result = await response.arrayBuffer();
+            const wasmModule = await WebAssembly.instantiate(result);
+
+            var startTime = performance.now()
+            const n = 1000000000;
+            const a = 8888;
+            for (let b = 9000; b < 10000; ++b) {
+                var calculationResult = wasmModule.instance.exports.nth_magical_number(n, a, b);
+            }
+
+            var endTime = performance.now()
+
+            const div = document.createElement("div");
+            div.innerText = `Elapsed time Rust: ${endTime - startTime}`;
+            document.body.appendChild(div);
+        }
+
+        async function loadCSharp() {
+
+            const wasmModule = await GetSharpWasm();
+            var startTime = performance.now()
+            const n = 1000000000;
+            const a = 8888;
+            for (let b = 9000; b < 10000; ++b) {
+                var calculationResult = wasmModule.Solution.NthMagicalNumber(n, a, b);
+            }
+
+            var endTime = performance.now()
+
+            const div = document.createElement("div");
+            div.innerText = `Elapsed time C#: ${endTime - startTime}`;
+            document.body.appendChild(div);
+        }
+
+        async function loadJS() {
+
+            var startTime = performance.now()
+            const n = 1000000000;
+            const a = 8888;
+            for (let b = 9000; b < 10000; ++b) {
+                runJSPayload(n, a, b);
+            }
+
+            var endTime = performance.now()
+
+            const div = document.createElement("div");
+            div.innerText = `Elapsed time JS: ${endTime - startTime}`;
+            document.body.appendChild(div);
+        }
+
+        document.getElementById("runCSharp").addEventListener("click", () => loadCSharp());
+        document.getElementById("runRust").addEventListener("click", () => loadRust());
+        document.getElementById("runJS").addEventListener("click", () => loadJS());
+
+    </script>
+</body>
+</html>

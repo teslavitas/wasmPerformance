@@ -1,0 +1,66 @@
+{
+  "mainAssemblyName": "charp-wasm(blazor).dll",
+  "assemblyRootFolder": "managed",
+  "debugLevel": 0,
+  "assets": [
+    {
+      "behavior": "dotnetwasm",
+      "name": "dotnet.native.wasm",
+      "hash": "sha256-cH/jRNyHqayJX4G071MxGygJhMzQmsppj3\u002BZWhggMrU="
+    },
+    {
+      "behavior": "js-module-native",
+      "name": "dotnet.native.js",
+      "hash": "sha256-I7ihgmohwQ1Xborim2SrBBm7la8/o2ju576rPy9bQVw="
+    },
+    {
+      "behavior": "js-module-dotnet",
+      "name": "dotnet.js",
+      "hash": "sha256-JnE17YeysqLoAa5JuYOcAniNxp/LE\u002BWvhmIbGmt\u002BSCw="
+    },
+    {
+      "behavior": "js-module-runtime",
+      "name": "dotnet.runtime.js",
+      "hash": "sha256-JsiN7Ts62RRN1lcEt8rT4X3UzLXZ37xI3dtckkQLiqY="
+    },
+    {
+      "behavior": "assembly",
+      "name": "charp-wasm(blazor).wasm",
+      "hash": "sha256-oYUFz0tDZwgFzPNT7I\u002BovsIsZBpwKjgy7C7sLknxfwU="
+    },
+    {
+      "behavior": "assembly",
+      "name": "CSharpPayload.wasm",
+      "hash": "sha256-RmYmOhsD4q2K4gJ/DEn76mMV/5KLy4HbJ\u002B3OmFWlfP4="
+    },
+    {
+      "behavior": "assembly",
+      "name": "HostWithCsharpWasm.wasm",
+      "hash": "sha256-xAED2JZnm5FOYs6GpiQ7GgKsJPYGxMKYgY7uqYXdsr8="
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Linq.wasm",
+      "hash": "sha256-LEuRUGry7fSU\u002BvHBiiqOrjxJFjVCUTgd0v9isIoY0Xw="
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Private.CoreLib.wasm",
+      "hash": "sha256-WHk6k8qGiA2NvrE0j31ciwWudTSMCoj1z6u1hosc4rc="
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Runtime.InteropServices.JavaScript.wasm",
+      "hash": "sha256-qMMF/RtEdawUJvWiZaMDtPl85pcoU2euG6e8k3kiFnc="
+    },
+    {
+      "virtualPath": "runtimeconfig.bin",
+      "behavior": "vfs",
+      "name": "supportFiles/0_runtimeconfig.bin",
+      "hash": "sha256-sF2ZoTge7fH4Zmd5cTchQzqKIXaZiXMpamV29Kvpr0w="
+    }
+  ],
+  "remoteSources": [],
+  "globalizationMode": "invariant",
+  "assetsHash": "sha256-lRoQUCJ4\u002B2AP\u002BC9D\u002ByIb83PhzUZLM49BJn0FTof7yO0="
+}

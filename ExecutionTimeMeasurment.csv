@@ -1,0 +1,18 @@
+﻿Always skip the first run;;;;;
+Environment;"Execution time n=1e9, a = 8000, b=[9000;9999], ms";"Execution time n=1e9, a = 8000, b=[9000;9999], launch 2, ms";"Execution time n=1e9, a = 8000, b=[9000;9999], launch 2, ms";"Execution time n=1e9, a = 8000, b=[9000;9999], average, ms";Launch options
+C#, .net7, release build;1038;1108;994;1047;dotnet run --configuration Release
+C#, .net7, debug build;1731;1645;1571;1649;dotnet run --configuration Debug
+C#, .net8 preview, debug build;1611;1547;1592;1583;dotnet run --configuration Debug
+C#, .net8 preview, release build;908;898;883;896;dotnet run --configuration Release
+C#, .net8 preview, wasm, release;19851;20094;19691;19879;dotnet publish --configuration Release
+JS implementation run in browser;621;648;625;631;
+Rust, debug;3100;2995;3038;3044;cargo run
+Rust, release;247;245;247;246;cargo run --release
+Rust, wasm, debug;514;482;481;492; cargo build --target wasm32-unknown-unknown
+Rust, wasm, release;485;482;499;489; cargo build --target wasm32-unknown-unknown --release
+Blazor (WebAssembly), .net7, debug;26025;27080;26113;26406;dotnet run --configuration Debug
+Blazor(WebAssembly), .net7, release;24637;25965;24083;24895;dotnet run --configuration Release
+Rust, wasmtime, debug;3700;3900;3550;3717;cargo build --target wasm32-wasi
+Rust, wasmtime, release;212;219;215;215;cargo build --target wasm32-wasi --release
+C#, .net8 wasmtime, debug;15196;14716;14582;14831;dotnet build --configuration Debug
+C#, .net8, wasmtime, release;14260;14644;17244;15383;dotnet build --configuration Release

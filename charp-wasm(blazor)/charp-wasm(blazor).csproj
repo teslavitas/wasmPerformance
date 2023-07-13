@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+    <WasmMainJSPath>charp-wasm.js</WasmMainJSPath>
+
+    <!-- JSExport requires unsafe code -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!-- Reduce output size -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <WasmEmitSymbolMap>false</WasmEmitSymbolMap>
+    <InvariantTimezone>true</InvariantTimezone>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpPayload\CSharpPayload.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿@page "/perfcheck"
+@using CSharpPayload;
+
+<PageTitle>Performance check</PageTitle>
+
+
+<p role="status">Elapsed time: @elapsedMs</p>
+
+<button class="btn btn-primary" @onclick="RunPerfCheck">Run</button>
+
+@code {
+    private long elapsedMs = 0;
+
+    private void RunPerfCheck()
+    {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        int n = 1000000000;
+        int a = 8888;
+        for (int b = 9000; b < 10000; ++b)
+        {
+            var calculationResult = CSharpDirectSolution.NthMagicalNumber(n, a, b);
+        }
+
+        watch.Stop();
+        elapsedMs = watch.ElapsedMilliseconds;
+    }
+}
