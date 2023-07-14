@@ -1,5 +1,5 @@
 ﻿Always skip the first run;;;;;
-Environment;"Execution time n=1e9, a = 8000, b=[9000;9999], ms";"Execution time n=1e9, a = 8000, b=[9000;9999], launch 2, ms";"Execution time n=1e9, a = 8000, b=[9000;9999], launch 2, ms";"Execution time n=1e9, a = 8000, b=[9000;9999], average, ms";Launch options
+Environment;Execution time n=1e9, a = 8000, b=[9000,9999], ms;Execution time n=1e9, a = 8000, b=[9000,9999], launch 2, ms;Execution time n=1e9, a = 8000, b=[9000,9999], launch 2, ms;Execution time n=1e9, a = 8000, b=[9000,9999], average, ms;Launch options
 C#, .net7, release build;1038;1108;994;1047;dotnet run --configuration Release
 C#, .net7, debug build;1731;1645;1571;1649;dotnet run --configuration Debug
 C#, .net8 preview, debug build;1611;1547;1592;1583;dotnet run --configuration Debug
