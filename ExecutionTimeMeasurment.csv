@@ -1,18 +1,29 @@
-﻿Always skip the first run;;;;;
-Environment;Execution time n=1e9, a = 8000, b=[9000,9999], ms;Execution time n=1e9, a = 8000, b=[9000,9999], launch 2, ms;Execution time n=1e9, a = 8000, b=[9000,9999], launch 2, ms;Execution time n=1e9, a = 8000, b=[9000,9999], average, ms;Launch options
-C#, .net7, release build;1038;1108;994;1047;dotnet run --configuration Release
-C#, .net7, debug build;1731;1645;1571;1649;dotnet run --configuration Debug
-C#, .net8 preview, debug build;1611;1547;1592;1583;dotnet run --configuration Debug
-C#, .net8 preview, release build;908;898;883;896;dotnet run --configuration Release
-C#, .net8 preview, wasm, release;19851;20094;19691;19879;dotnet publish --configuration Release
-JS implementation run in browser;621;648;625;631;
-Rust, debug;3100;2995;3038;3044;cargo run
-Rust, release;247;245;247;246;cargo run --release
-Rust, wasm, debug;514;482;481;492; cargo build --target wasm32-unknown-unknown
-Rust, wasm, release;485;482;499;489; cargo build --target wasm32-unknown-unknown --release
-Blazor (WebAssembly), .net7, debug;26025;27080;26113;26406;dotnet run --configuration Debug
-Blazor(WebAssembly), .net7, release;24637;25965;24083;24895;dotnet run --configuration Release
-Rust, wasmtime, debug;3700;3900;3550;3717;cargo build --target wasm32-wasi
-Rust, wasmtime, release;212;219;215;215;cargo build --target wasm32-wasi --release
-C#, .net8 wasmtime, debug;15196;14716;14582;14831;dotnet build --configuration Debug
-C#, .net8, wasmtime, release;14260;14644;17244;15383;dotnet build --configuration Release
+﻿Always skip the first run;;;;;;
+Environment;Execution time n=1e9, a = 8000, b=[9000,9999], ms;Execution time n=1e9, a = 8000, b=[9000,9999], launch 2, ms;Execution time n=1e9, a = 8000, b=[9000,9999], launch 3, ms;Execution time n=1e9, a = 8000, b=[9000,9999], average, ms;Launch options;wasm file size
+C#, .net7, release build;1038;1108;994;1047;dotnet run --configuration Release;
+C#, .net7, debug build;1731;1645;1571;1649;dotnet run --configuration Debug;
+C#, .net8 preview, debug build;1611;1547;1592;1583;dotnet run --configuration Debug;
+C#, .net8 preview, release build;908;898;883;896;dotnet run --configuration Release;
+C#, .net8 preview, wasm, release;19851;20094;19691;19879;dotnet publish --configuration Release;
+JS implementation run in browser;621;648;625;631;;
+Rust, debug;3100;2995;3038;3044;cargo run;
+Rust, release;247;245;247;246;cargo run --release;
+Rust, wasm, debug;514;482;481;492; cargo build --target wasm32-unknown-unknown;
+Rust, wasm, release;485;482;499;489; cargo build --target wasm32-unknown-unknown --release;
+Blazor (WebAssembly), .net7, debug;26025;27080;26113;26406;dotnet run --configuration Debug;
+Blazor(WebAssembly), .net7, release;24637;25965;24083;24895;dotnet run --configuration Release;
+Rust, wasmtime, debug;3700;3900;3550;3717;cargo build --target wasm32-wasi;
+Rust, wasmtime, release;212;219;215;215;cargo build --target wasm32-wasi --release;
+C#, .net8 wasmtime, debug;15196;14716;14582;14831;dotnet build --configuration Debug;
+C#, .net8, wasmtime, release;14260;14644;17244;15383;dotnet build --configuration Release;
+December 2023:;;;;;;
+C#, .net8 wasmtime, debug;14241;14166;14456;14288;dotnet build --configuration Debug;25225707
+C#, .net8, wasmtime, release;13638;13731;13669;13679;dotnet build --configuration Release;25225707
+C#, .net8 AOT, wasmtime, debug;6517;6206;6182;6301;dotnet publish -r wasi-wasm -c debug /p:MSBuildEnableWorkloadResolver=false /p:UseAppHost=false --self-contained;16883296
+C#, .net8 AOT, wasmtime, release;2271;2230;2235;2245;dotnet publish -r wasi-wasm -c release /p:MSBuildEnableWorkloadResolver=false /p:UseAppHost=false --self-contained;6713419
+C#, .net8 AOT, wasmtime, release, no debug symbols;;;;;dotnet publish -r wasi-wasm -c release /p:MSBuildEnableWorkloadResolver=false /p:UseAppHost=false /p:NativeDebugSymbols=false --self-contained ;3421883
+C#, .net8 AOT, wasmtime, release, no debug symbols + invariant globalization + IlcGenerateStackTraceData+IlcDisableReflection;2106;2238;2141;2162;dotnet publish -r wasi-wasm -c release /p:MSBuildEnableWorkloadResolver=false /p:UseAppHost=false /p:NativeDebugSymbols=false --self-contained ;1361903
+C#, .net7, release;1036;1074;1058;1056;dotnet run --configuration Release;
+C#, .net7, debug;1635;1636;1696;1656;dotnet run --configuration Debug;
+C#, .net8, debug build;1569;1544;1512;1541;dotnet run --configuration Debug;
+C#, .net8, release build;991;940;945;958;dotnet run --configuration Release;

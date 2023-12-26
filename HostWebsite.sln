@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostWebsite", "HostWebsite\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "charp-wasm(blazor)", "charp-wasm(blazor)\charp-wasm(blazor).csproj", "{FDDB381B-2C90-4F06-BFE6-E4E3151C41D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpDirect", "CSharpDirect\CSharpDirect.csproj", "{37909DDF-7FFF-4960-8209-B533A88970A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpDirect", "CSharpDirect\CSharpDirect.csproj", "{37909DDF-7FFF-4960-8209-B533A88970A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpPayload", "CSharpPayload\CSharpPayload.csproj", "{6AA52E57-ED69-4DD2-8093-2B39921F37F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpPayload", "CSharpPayload\CSharpPayload.csproj", "{6AA52E57-ED69-4DD2-8093-2B39921F37F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebassemblyDirect", "BlazorWebassemblyDirect\BlazorWebassemblyDirect.csproj", "{21F19608-3083-40F3-B440-90BFBEF0502D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebassemblyDirect", "BlazorWebassemblyDirect\BlazorWebassemblyDirect.csproj", "{21F19608-3083-40F3-B440-90BFBEF0502D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csharp-wasi", "csharp-wasi\csharp-wasi.csproj", "{79B377B7-BF70-4466-A26C-0DF11B4F2564}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csharp-aot-wasi", "csharp-aot-wasi\csharp-aot-wasi.csproj", "{73432D2A-62CE-484A-B650-DBD578152D3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{79B377B7-BF70-4466-A26C-0DF11B4F2564}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79B377B7-BF70-4466-A26C-0DF11B4F2564}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79B377B7-BF70-4466-A26C-0DF11B4F2564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73432D2A-62CE-484A-B650-DBD578152D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73432D2A-62CE-484A-B650-DBD578152D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73432D2A-62CE-484A-B650-DBD578152D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73432D2A-62CE-484A-B650-DBD578152D3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
